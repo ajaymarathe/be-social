@@ -15,6 +15,7 @@ class CommentController extends Controller
      */
     public function index(Post $post)
     {
+        // return $post->comment;
         return $post->comment; 
     }
 

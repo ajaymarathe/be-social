@@ -32,11 +32,27 @@ body{
 h1,h2,h3,h4,h5,h6{
   font-family: 'Poppins', sans-serif !important;
 }
-p,pre,span{
+p,pre,span,small,input,a,td,th{
   font-family: 'Poppins', sans-serif !important;
 }
+::placeholder{
+  font-family: 'Poppins', sans-serif !important;
+}
+/* ends */
 .bg-image{
     background-size: cover;
     width: 100%;
     height: 100vh;
+}
+
+/* posts */
+.posts .card-subtitle{
+  font-size: 12px;
+}
+.posts .main-body p{
+  margin-bottom: 0;
+}
+/* navbar  */
+.navbar {
+
 }

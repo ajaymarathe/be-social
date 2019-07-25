@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Resources\PostResource;
 
 class PostController extends Controller
 {
@@ -14,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Post::latest()->get();
+        return PostResource::collection(Post::latest()->get());
     }
 
 
@@ -49,7 +51,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post)
-    {   
+    {
         $request['slug'] = str_slug($request->post);
         $post->update($request->all());
         return response('updated successfully!',200);

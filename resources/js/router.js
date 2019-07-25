@@ -8,10 +8,10 @@ import Posts from './components/posts.vue';
 
 
 const routes = [
-    { path: '/login',component: Login},
-    { path: '/signup',component: Signup},
+    { path: '/login',component: Login, name: 'login'},
+    { path: '/signup',component: Signup, name: 'signup'},
     {
-        path: '/posts',
+        path: '/',
         component: Posts,
         name: 'posts',
     },
