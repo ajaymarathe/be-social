@@ -8,6 +8,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import router from './router.js';
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +21,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('app-home', require('./components/apphome.vue').default);
 
 Vue.component('passport-clients', require('./components/passport/Clients.vue').default);
 
@@ -35,4 +37,5 @@ Vue.component('passport-personal-access-tokens',require('./components/passport/P
 
 const app = new Vue({
     el: '#app',
+    router
 });
